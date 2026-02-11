@@ -1,0 +1,215 @@
+.cta-section {
+  padding: 6rem 4rem;
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cta-content {
+  background: linear-gradient(135deg, #C8E6C9 0%, #A5D6A7 100%);
+  border-radius: 24px;
+  padding: 4rem 5rem;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.cta-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.cta-icon {
+  font-size: 2rem;
+}
+
+.cta-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #1B5E20;
+  margin: 0;
+}
+
+.cta-subheading {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2E7D32;
+  margin: 0;
+  font-weight: 400;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.cta-primary-button {
+  background: #1B5E20;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.cta-primary-button:hover {
+  background: #2E7D32;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+}
+
+.button-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.cta-primary-button:hover .button-arrow {
+  transform: translateX(4px);
+}
+
+.cta-secondary-button {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1B5E20;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.cta-secondary-button:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 4rem 3rem;
+  }
+  
+  .cta-content {
+    padding: 3.5rem 3rem;
+    border-radius: 20px;
+  }
+  
+  .cta-heading {
+    font-size: 2.25rem;
+  }
+  
+  .cta-subheading {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 3rem 2rem;
+  }
+  
+  .cta-content {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+  }
+  
+  .cta-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cta-icon {
+    font-size: 2rem;
+  }
+  
+  .cta-heading {
+    font-size: 1.875rem;
+  }
+  
+  .cta-subheading {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.875rem;
+  }
+  
+  .cta-primary-button,
+  .cta-secondary-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 2rem;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .cta-content {
+    padding: 2.5rem 1.5rem;
+    border-radius: 18px;
+  }
+  
+  .cta-heading {
+    font-size: 1.625rem;
+  }
+  
+  .cta-subheading {
+    font-size: 0.95rem;
+  }
+}
