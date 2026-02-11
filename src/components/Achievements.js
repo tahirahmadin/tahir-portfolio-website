@@ -8,28 +8,32 @@ const Achievements = () => {
       name: 'EthIndia',
       title: 'Finalist — Flow3 Project',
       year: '2024',
-      logo: '/images/achievements/ethindia.png'
+      logo: '/images/achievements/ethindia.png',
+      fallbackLogo: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/ethereum.svg' // Fallback URL if local image not found
     },
     {
       id: 2,
-      name: 'EthIstanbul',
+      name: 'EthGlobal',
       title: 'Winner — Hackathon',
       year: '2023',
-      logo: '/images/achievements/ethistanbul.png'
+      logo: '/images/achievements/ethglobal.png',
+      fallbackLogo: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/ethereum.svg' // Fallback URL if local image not found
     },
     {
       id: 3,
       name: '1inch',
       title: 'Award — EthIndia Hackathon',
       year: '2023',
-      logo: '/images/achievements/1inch.png'
+      logo: '/images/achievements/1inch.png',
+      fallbackLogo: 'https://cryptologos.cc/logos/1inch-1inch-logo.png' // Fallback URL if local image not found
     },
     {
       id: 4,
       name: 'Chainlink',
       title: 'Hackathon Winner',
       year: '2022 & 2023',
-      logo: '/images/achievements/chainlink.png'
+      logo: '/images/achievements/chainlink.png',
+      fallbackLogo: 'https://cryptologos.cc/logos/chainlink-link-logo.png' // Fallback URL if local image not found
     },
     {
       id: 5,
@@ -56,8 +60,14 @@ const Achievements = () => {
                   alt={achievement.name}
                   className="achievement-logo"
                   onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
+                    // Try fallback logo if available
+                    if (achievement.fallbackLogo && e.target.src !== achievement.fallbackLogo) {
+                      e.target.src = achievement.fallbackLogo;
+                    } else {
+                      // Show placeholder if both fail
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }
                   }}
                 />
                 <div className="achievement-logo-placeholder" style={{display: 'none'}}>
