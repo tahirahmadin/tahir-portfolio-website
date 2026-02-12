@@ -46,6 +46,10 @@
     gap: 1rem;
   }
   
+  .footer-nav-item {
+    font-size: 0.85rem;
+  }
+  
   .footer-content {
     flex-direction: column;
     text-align: center;
@@ -53,5 +57,23 @@
   
   .footer-social {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .footer-nav-banner {
+    gap: 0.875rem;
+  }
+  
+  .footer-nav-item {
+    font-size: 0.8rem;
+  }
+  
+  .footer-separator {
+    font-size: 0.75rem;
   }
 }

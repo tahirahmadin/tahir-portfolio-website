@@ -10,22 +10,27 @@ const Experience = () => {
       description: 'Sayy AI allows you to build scalable AI-powered platforms for creators and businesses.',
       tag: 'AI Platform',
       icon: '🤖',
+      logoIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16TDruLT2ogDn6xJrEmaJLPN8ZvO9CAyqGg&s',
       visualText: 'AI-powered SaaS platform.',
       highlight: 'AI',
       stats: '50K+ users',
-      url: 'https://sayyai.com'
+      url: 'https://sayyai.com',
+      headerImage: 'https://sayyaibucket.s3.ap-south-1.amazonaws.com/frontend/Product-meta-preview.png'
     },
     {
       id: 2,
       title: 'Gobbl',
       subtitle: 'Blockchain Lead',
       description: 'Gobbl enables Web3 gaming ecosystems with scalable blockchain infrastructure.',
-      tag: 'Web3',
+      tag: 'Telegram Mini App',
       icon: '⛓️',
       visualText: 'Web3 gaming platform.',
       highlight: 'Web3',
       stats: '30K+ players',
-      url: 'https://gobbl.com'
+      url: 'https://gobbl.com',
+      headerImage: 'https://i.ytimg.com/vi/yTVf3LkL-kw/maxresdefault.jpg',
+      logoIcon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgBqEdDQ5v7QfHVj7kWijrldfAe0ShmyEPMg&s',
+
     },
     {
       id: 3,
@@ -37,7 +42,9 @@ const Experience = () => {
       visualText: 'NFT gaming ecosystem.',
       highlight: 'NFT',
       stats: '25K+ users',
-      url: 'https://onerare.io'
+      url: 'https://onerare.io',
+      logoIcon: 'https://media.licdn.com/dms/image/v2/D4D0BAQHY3o_yxhFaPA/company-logo_200_200/B4DZkGoykMIgAI-/0/1756752980855/gobbl_logo?e=2147483647&v=beta&t=SqmMPqoVAbADadAgZyHEVtfyR7RyzlzzWVofQtkcqR4',
+      headerImage: 'https://1499377728-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MkXfxALyD8sO44Y1OrY%2Fuploads%2FQvX3Uc0Ek5QPRRZIUMK2%2FUntitled%20design%20(3).gif?alt=media&token=eb3bd406-f66b-4738-9428-3dd8d8ed97fe',
     },
     {
       id: 4,
@@ -48,8 +55,10 @@ const Experience = () => {
       icon: '🔗',
       visualText: 'Multi-chain DeFi platform.',
       highlight: 'DeFi',
-      stats: '100K+ users',
-      url: 'https://polkabridge.org'
+      stats: '150M+ Market Cap',
+      url: 'https://polkabridge.org',
+      logoIcon: 'https://miro.medium.com/v2/resize:fit:2400/1*WafcY5M8FNmO68JkzJft9w.png',
+      headerImage: 'https://miro.medium.com/v2/resize:fit:1400/0*f1FuHv1LfM7fnRrj',
     },
     {
       id: 5,
@@ -61,7 +70,9 @@ const Experience = () => {
       visualText: 'NFT gaming platform.',
       highlight: 'gaming',
       stats: '40K+ players',
-      url: 'https://polkawar.com'
+      url: 'https://polkawar.com',
+      logoIcon: 'https://img.bgstatic.com/multiLang/coinPriceLogo/1x1/polkawar.jpg',
+      headerImage: 'https://coinkritik.com/wp-content/uploads/2021/08/polkawar1.jpg',
     },
     {
       id: 6,
@@ -103,23 +114,45 @@ const Experience = () => {
           {experiences.map((exp) => (
             <div key={exp.id} className="experience-card">
               <div className="card-header">
-                <div className="card-visual-elements">
-                  <div className="visual-cube large"></div>
-                  <div className="visual-cube small"></div>
-                </div>
-                <div className="card-visual-text">
-                  {exp.visualText.split(' ').map((word, idx) => (
-                    word.toLowerCase() === exp.highlight.toLowerCase() ? (
-                      <span key={idx} className="highlighted-text">{word} </span>
-                    ) : (
-                      <span key={idx}>{word} </span>
-                    )
-                  ))}
-                </div>
+                {exp.headerImage ? (
+                  <img 
+                    src={exp.headerImage} 
+                    alt={exp.title}
+                    className="card-header-image"
+                  />
+                ) : (
+                  <>
+                    <div className="card-visual-elements">
+                      <div className="visual-cube large"></div>
+                      <div className="visual-cube small"></div>
+                    </div>
+                    <div className="card-visual-text">
+                      {exp.visualText.split(' ').map((word, idx) => (
+                        word.toLowerCase() === exp.highlight.toLowerCase() ? (
+                          <span key={idx} className="highlighted-text">{word} </span>
+                        ) : (
+                          <span key={idx}>{word} </span>
+                        )
+                      ))}
+                    </div>
+                  </>
+                )}
                 <button className="card-menu-btn">⋯</button>
               </div>
+              <div className="card-logo-overlap">
+                {exp.logoIcon ? (
+                  <img 
+                    src={exp.logoIcon} 
+                    alt={exp.title}
+                    className="card-logo-image"
+                  />
+                ) : (
+                  <div className="card-icon-placeholder">
+                    {exp.icon}
+                  </div>
+                )}
+              </div>
               <div className="card-content">
-                <div className="card-icon">{exp.icon}</div>
                 <div className="card-info">
                   <div className="card-title-row">
                     <h3 className="card-title">{exp.title}</h3>

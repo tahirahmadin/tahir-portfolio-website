@@ -39,7 +39,7 @@ const Projects = () => {
       highlight: 'crypto',
       stats: '15K+ learners',
       url: 'https://firstcrypto.com',
-      headerImage: null,
+      headerImage: 'https://devfolio-prod.s3.ap-south-1.amazonaws.com/hackathons/becdb269b9ea4e708c7d96329563e478/projects/20d2f90eecc7412a85ad1b3a9a19fb41/3855aa65-226c-4c53-a356-494124dda9ec.png',
       logoImage: null
     },
     {

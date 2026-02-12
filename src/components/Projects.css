@@ -339,15 +339,44 @@
 
 @media (max-width: 480px) {
   .projects-section {
-    padding: 4rem 2rem;
+    padding: 3rem 1.5rem;
   }
   
   .projects-container {
     padding: 0 0.5rem;
   }
   
+  .projects-header {
+    margin-bottom: 3rem;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+  
+  .card-header {
+    padding: 0.875rem;
+    min-height: 140px;
+  }
+  
+  .card-content {
+    padding: 0.875rem;
+  }
+  
+  .card-footer {
+    padding: 0.75rem 0.875rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .card-button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .card-stats {
+    justify-content: center;
   }
 }
