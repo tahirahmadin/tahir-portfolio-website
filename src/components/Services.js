@@ -60,7 +60,6 @@ const Services = () => {
     <section className="services-section" id="services">
       <div className="services-container">
         <div className="services-header">
-          <div className="star-icon-header">★</div>
           <h2 className="section-title">SERVICES</h2>
           <p className="section-description">
             How I can help you build and scale your product.

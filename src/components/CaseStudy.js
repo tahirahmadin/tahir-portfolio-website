@@ -30,7 +30,6 @@ const CaseStudy = () => {
     <section className="casestudy-section" id="projects">
       <div className="casestudy-container">
         <div className="casestudy-header">
-          <div className="star-icon-header">★</div>
           <h2 className="section-title">CASE STUDY</h2>
           <p className="section-description">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.

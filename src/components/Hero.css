@@ -141,6 +141,8 @@
   transition: all 0.3s ease;
   border-radius: 4px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary:hover {
@@ -159,9 +161,10 @@
   transition: all 0.3s ease;
   border-radius: 4px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
 }
 
 .btn-secondary:hover {
@@ -632,9 +635,9 @@
 }
 
 .banner-nav-item {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -643,7 +646,7 @@
 
 .banner-separator {
   color: #ffffff;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   opacity: 0.8;
 }
 

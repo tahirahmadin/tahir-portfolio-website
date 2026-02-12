@@ -5,42 +5,42 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
-      name: 'EthIndia',
-      title: 'Finalist — Flow3 Project',
-      year: '2024',
-      logo: '/images/achievements/ethindia.png',
-      fallbackLogo: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/ethereum.svg' // Fallback URL if local image not found
+      name: 'Winner EthIndia Hackathon - 2024',
+      title: 'Flow3 - Developed an automated workflow building for Web3',
+      logo: 'https://media.licdn.com/dms/image/v2/C510BAQHvuGFkI0KxSg/company-logo_200_200/company-logo_200_200/0/1630567157751/ethindia_logo?e=2147483647&v=beta&t=JaqWwyZsQNJ2SNwGlQP4T0-Rja8tzEPdFsLjH7PrpdA',
+      fallbackLogo: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/ethereum.svg',
+      url: 'https://ethindia.org'
     },
     {
       id: 2,
-      name: 'EthGlobal',
-      title: 'Winner — Hackathon',
-      year: '2023',
-      logo: '/images/achievements/ethglobal.png',
-      fallbackLogo: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/ethereum.svg' // Fallback URL if local image not found
+      name: 'Won at EthIstanbul Hackathon - 2023',
+      title: 'Won Prizes at EthIstanbul Hackathon - 2023',
+      logo: 'https://ethglobal.storage/events/istanbul/logo/default',
+      fallbackLogo: 'https://raw.githubusercontent.com/simple-icons/simple-icons/master/icons/ethereum.svg',
+      url: 'https://ethglobal.co'
     },
     {
       id: 3,
-      name: '1inch',
-      title: 'Award — EthIndia Hackathon',
-      year: '2023',
+      name: '1st Prize from 1Inch',
+      title: '1st Prize from 1Inch — EthIndia Hackathon - 2023',
       logo: '/images/achievements/1inch.png',
-      fallbackLogo: 'https://cryptologos.cc/logos/1inch-1inch-logo.png' // Fallback URL if local image not found
+      fallbackLogo: 'https://cryptologos.cc/logos/1inch-1inch-logo.png',
+      url: 'https://1inch.io'
     },
     {
       id: 4,
-      name: 'Chainlink',
-      title: 'Hackathon Winner',
-      year: '2022 & 2023',
+      name: 'Chainlink Hackathon - 2023',
+      title: 'Top 10 Finalist at Chainlink Spring Hackathon - 2023',
       logo: '/images/achievements/chainlink.png',
-      fallbackLogo: 'https://cryptologos.cc/logos/chainlink-link-logo.png' // Fallback URL if local image not found
+      fallbackLogo: 'https://cryptologos.cc/logos/chainlink-link-logo.png',
+      url: 'https://chain.link'
     },
     {
       id: 5,
-      name: 'IMT Ghaziabad',
-      title: 'Business Plan Competition',
-      year: '',
-      logo: '/images/achievements/imt.png'
+      name: 'Runner Up at IMT Ghaziabad - 2021',
+      title: 'Presented EDOCTO and won 30,000 INR for the project',
+      logo: 'https://yt3.googleusercontent.com/ytc/AIdro_mh6trGyVeuR7JfigFwQHe6xnEho1tt9U0OTYxPmlUVqg=s900-c-k-c0x00ffffff-no-rj',
+      url: 'https://imt.edu'
     }
   ];
 
@@ -48,12 +48,17 @@ const Achievements = () => {
     <section className="achievements-section">
       <div className="achievements-container">
         <div className="achievements-header">
-          <div className="star-icon-header">★</div>
           <h2 className="section-title">ACHIEVEMENTS</h2>
         </div>
         <div className="achievements-list">
           {achievements.map((achievement) => (
-            <div key={achievement.id} className="achievement-item">
+            <a 
+              key={achievement.id} 
+              href={achievement.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="achievement-item"
+            >
               <div className="achievement-logo-wrapper">
                 <img 
                   src={achievement.logo} 
@@ -76,16 +81,9 @@ const Achievements = () => {
               </div>
               <div className="achievement-content">
                 <h3 className="achievement-name">{achievement.name}</h3>
-                <span className="achievement-separator">•</span>
                 <p className="achievement-title">{achievement.title}</p>
-                {achievement.year && (
-                  <>
-                    <span className="achievement-separator">•</span>
-                    <span className="achievement-year">{achievement.year}</span>
-                  </>
-                )}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

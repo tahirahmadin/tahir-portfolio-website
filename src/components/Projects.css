@@ -20,19 +20,24 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 24px;
+  overflow: visible;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -50,6 +55,8 @@
   background-size: 20px 20px;
   overflow: hidden;
   min-height: 180px;
+  border-radius: 24px 24px 0 0;
+  z-index: 1;
 }
 
 .card-header-image {
@@ -128,33 +135,50 @@
   opacity: 1;
 }
 
-.card-content {
-  padding: 1.5rem;
+.card-logo-overlap {
+  position: absolute;
+  top: 148px;
+  left: 1.5rem;
+  width: 56px;
+  height: 56px;
+  z-index: 20;
   background-color: #ffffff;
+  border-radius: 12px;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
 
-.card-icon {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
+.card-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.25rem;
+  border-radius: 12px;
+}
+
+.card-icon-placeholder {
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  flex-shrink: 0;
 }
 
-.card-icon-image {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  object-fit: contain;
-  border-radius: 8px;
-  flex-shrink: 0;
+.card-content {
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: #ffffff;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 0 24px 24px;
 }
 
 .card-info {
@@ -199,9 +223,10 @@
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 24px 24px;
 }
 
 .card-button {

@@ -14,7 +14,7 @@ const Experience = () => {
       visualText: 'AI-powered SaaS platform.',
       highlight: 'AI',
       stats: '50K+ users',
-      url: 'https://sayyai.com',
+      url: 'https://sayy.ai',
       headerImage: 'https://sayyaibucket.s3.ap-south-1.amazonaws.com/frontend/Product-meta-preview.png'
     },
     {
@@ -84,27 +84,17 @@ const Experience = () => {
       visualText: 'Coaching platform SaaS.',
       highlight: 'SaaS',
       stats: '5K+ institutes',
-      url: 'https://rizer.com'
+      url: 'https://www.facebook.com/rizerforcoachings/',
+      logoIcon: 'https://media.licdn.com/dms/image/v2/C510BAQFEChG1SLrMcQ/company-logo_200_200/company-logo_200_200/0/1630602888734/rizer_technologies_logo?e=2147483647&v=beta&t=yDro0KbAZtsW9CDnTF9qPJKlN5DdLv4vXglzM7T9U0Y',
+      headerImage: 'https://scontent.fdel1-3.fna.fbcdn.net/v/t1.6435-9/106495269_174857507331874_1493886288443990102_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0b6b33&_nc_ohc=Ug219KAgjXwQ7kNvwF89x87&_nc_oc=Adnr0Bp_43hK0hU8xNLdUpafsbR6mbmh9g-OEg4tHN5eqYY5WSJuOTBtJEVEgzmKq8eO2ZmeonmmiyOfzvKNf-qO&_nc_zt=23&_nc_ht=scontent.fdel1-3.fna&_nc_gid=y-RtlKm-Kn5vJIZPQB0O7g&oh=00_AfvCyN3rUMfpOrPFxPgLw_fB-qIDOni4S4q2RHSqXKZaPQ&oe=69B4FE16',
     },
-    {
-      id: 7,
-      title: 'DISQ',
-      subtitle: 'Product Engineer',
-      description: 'DISQ delivers financial growth solutions for street vendors and small businesses.',
-      tag: 'FinTech',
-      icon: '💳',
-      visualText: 'Financial growth platform.',
-      highlight: 'financial',
-      stats: '10K+ vendors',
-      url: 'https://disq.com'
-    }
+
   ];
 
   return (
     <section className="experience-section" id="experience">
       <div className="experience-container">
         <div className="experience-header">
-          <div className="star-icon-header">★</div>
           <h2 className="section-title">EXPERIENCE</h2>
           <p className="section-description">
             Companies and teams I've worked with to build impactful products.
@@ -112,7 +102,13 @@ const Experience = () => {
         </div>
         <div className="experience-grid">
           {experiences.map((exp) => (
-            <div key={exp.id} className="experience-card">
+            <a 
+              key={exp.id} 
+              href={exp.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="experience-card"
+            >
               <div className="card-header">
                 {exp.headerImage ? (
                   <img 
@@ -161,16 +157,7 @@ const Experience = () => {
                   <p className="card-description">{exp.description}</p>
                 </div>
               </div>
-              <div className="card-footer">
-                <a href={exp.url} target="_blank" rel="noopener noreferrer" className="card-button">
-                  View Company
-                </a>
-                <div className="card-stats">
-                  <span className="stats-icon">☁</span>
-                  <span className="stats-text">{exp.stats}</span>
-                </div>
-              </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

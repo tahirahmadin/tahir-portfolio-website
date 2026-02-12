@@ -35,8 +35,22 @@ const Hero = () => {
               </li>
             </ul>
             <div className="hero-buttons">
-              <button className="btn-primary">Let's Talk</button>
-              <button className="btn-secondary">Download Cv <span className="download-arrow">↓</span></button>
+              <a 
+                href="https://www.linkedin.com/in/tahirahmadin/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Let's Talk
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/tahirahmadin/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                Download Cv <span className="download-arrow">↓</span>
+              </a>
             </div>
           </div>
         </div>

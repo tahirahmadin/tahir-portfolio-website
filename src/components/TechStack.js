@@ -37,7 +37,6 @@ const TechStack = () => {
     <section className="techstack-section">
       <div className="techstack-container">
         <div className="techstack-header">
-          <div className="star-icon-header">★</div>
           <h2 className="section-title">TECH STACK</h2>
         </div>
         <div className="techstack-grid">

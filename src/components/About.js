@@ -6,7 +6,6 @@ const About = () => {
     <section className="about-section" id="about">
       <div className="about-container">
         <div className="about-header">
-          <div className="star-icon-header">★</div>
           <h2 className="section-title">ABOUT</h2>
         </div>
         <div className="about-content">
